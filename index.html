@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./Images/calculator_icon-icons.com_72046.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="calculator,addition,subtraction," content="calculator" >
+    <title>Calculator</title>
+
+  </head>
+  <body>
+    <div class="bg">
+      <header>Calculator</header>
+      <section class="calci">
+          <input type="text" name="" id="input_No" required />
+          <section class="items ">
+               <span onclick="val('1')" class="btn num">1</span>
+               <span onclick="val('2')" class="btn num">2</span>
+               <span onclick="val('3')" class="btn num">3</span>
+               <span onclick="val('+')" class="btn op">+</span>
+               <span onclick="val('4')" class="btn num">4</span>
+               <span onclick="val('5')" class="btn num">5</span>
+               <span onclick="val('6')" class="btn num">6</span>
+               <span onclick="val('-')" class="btn op">-</span>
+               <span onclick="val('7')" class="btn num">7</span>
+               <span onclick="val('8')" class="btn num">8</span>
+               <span onclick="val('9')" class="btn num">9</span>
+               <span onclick="val('*')" class="btn op">*</span>
+               <span onclick="val('0')" class="btn num">0</span>
+               <span onclick="val('=')" class="btn op">=</span>
+               <span onclick="val('C')" class="btn op">C</span>
+               <span onclick="val('/')" class="btn op">/</span>
+          </section>
+      </section>
+    </div>
+    
+    <script src="./script.js"></script>
+    <script>
+      let input = document.querySelector("input_No");
+      let val = (args)=>{
+        input.value += args;
+      }
+    </script>
+  </body>
+</html>
