@@ -17,34 +17,34 @@
     <div class="bg">
       <header>Calculator</header>
       <section class="calci">
-          <input type="text" name="" id="input_No" required />
-          <section class="items ">
-               <span onclick="val('1')" class="btn num">1</span>
-               <span onclick="val('2')" class="btn num">2</span>
-               <span onclick="val('3')" class="btn num">3</span>
-               <span onclick="val('+')" class="btn op">+</span>
-               <span onclick="val('4')" class="btn num">4</span>
-               <span onclick="val('5')" class="btn num">5</span>
-               <span onclick="val('6')" class="btn num">6</span>
-               <span onclick="val('-')" class="btn op">-</span>
-               <span onclick="val('7')" class="btn num">7</span>
-               <span onclick="val('8')" class="btn num">8</span>
-               <span onclick="val('9')" class="btn num">9</span>
-               <span onclick="val('*')" class="btn op">*</span>
-               <span onclick="val('0')" class="btn num">0</span>
-               <span onclick="val('=')" class="btn op">=</span>
-               <span onclick="val('C')" class="btn op">C</span>
-               <span onclick="val('/')" class="btn op">/</span>
-          </section>
+        <div type="text" name="" id="" readonly class="number digital-text" title="Input field"></div>
+        
+        <div class="btn">
+          <span class="op"onclick=val("C") title="clear all input field">C</span>
+          <span class="op"onclick=val("X") title="Clear single digit">del</span>
+          <span class="op"onclick=val("%") title="Modulus Operator">%</span>
+          <span class="op"onclick=val("/") title="division Operator">/</span>
+          <span class="no"onclick=val("7") title="Integer value">7</span>
+          <span class="no"onclick=val("8") title="Integer value">8</span>
+          <span class="no"onclick=val("9") title="Integer value">9</span>
+          <span class="op"onclick=val("*") title="operator">*</span>
+          <span class="no"onclick=val("4") title="Interger value">4</span>
+          <span class="no"onclick=val("5") title="Interger value">5</span>
+          <span class="no"onclick=val("6") title="Interger value">6</span>
+          <span class="op"onclick=val("-") title="operator">-</span>
+          <span class="no"onclick=val("1") title="Integer value">1</span>
+          <span class="no"onclick=val("2") title="Integer value">2</span>
+          <span class="no"onclick=val("3") title="Integer value">3</span>
+          <span class="op"onclick=val("+") title="operator">+</span>
+          <span class="no"onclick=val("0") title="Integer value">0</span>
+          <span class="no"onclick=val(".") title="dot operator">.</span>
+          <span class="no"onclick=val("00") title="Integer value">00</span>
+          <span class="op"onclick=val("=") title="Final result">=</span>
+        </div>
       </section>
     </div>
     
     <script src="./script.js"></script>
-    <script>
-      let input = document.querySelector("input_No");
-      let val = (args)=>{
-        input.value += args;
-      }
-    </script>
+    
   </body>
 </html>
