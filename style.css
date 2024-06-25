@@ -120,7 +120,9 @@ body {
 }
 .btn span.op{
     background-color: #7A71CF;
-
+}
+.btn span.un{
+    background-color: #51C6E4;
 }
 
 .btn span:hover{

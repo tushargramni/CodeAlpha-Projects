@@ -1,8 +1,6 @@
 let i = document.querySelector(".number");
 let op = 0,
-  v = 0,
-  r = 0,
-  l = 0;
+  v = 0;
 
 let val = (e) => {
   if (e === "=") {
@@ -29,15 +27,8 @@ let val = (e) => {
       i.innerHTML = op;
     }
   } else if (e === "X") {
-    r = 0;
-    l = 0;
-    b = 0;
-    r = i.innerHTML;
-    l = r.length;
-    console.log(" l : ", l);
-    for (let a = 0; a < l - 1; l++) b += r[a];
-    console.log(b);
-    i.innerHTML = r;
+    v = i.innerHTML / 10;
+    i.innerHTML = v;
   } else {
     i.innerHTML += e;
   }
