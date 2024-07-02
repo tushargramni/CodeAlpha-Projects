@@ -3,25 +3,44 @@ nav {
     width: 100%;
     position: fixed;
     display: flex;
-    z-index: 3;
+    z-index: 4;
     flex-direction: row;
     flex-wrap: wrap;
     backdrop-filter: blur(8px);
-    background: hsla(0, 100%, 100%, 0.1);
+    /* background: hsla(0, 100%, 100%, 0.1); */
     justify-content: space-between;
     
   }
   nav > * {
+    color: white;
     cursor: pointer;
     pointer-events: all;
   }
   nav .name {
-    /* position: relative; */
+    display: flex;
+    word-break: break-all;
     padding: 1rem;
-    margin: 0 auto;
-    font-size: 2rem;
+    margin: auto;
+    font-size: clamp(2rem, 2vw + 1rem, 4rem);
     /* border: solid 2px white; */
   }
+  nav .name:hover{
+    border-radius: 0px;
+  }
+  nav .name a{
+    font-size: clamp(2rem, 2vw + 1rem, 4rem);
+    color: white; text-decoration: none;
+  }
+  nav .name a::first-letter{
+    font-size: clamp(2rem, 2vw + 1rem, 4rem);
+    color: #de6ffa;
+  }
+  
+
+  nav .name a:hover::first-letter{
+    color: black;
+  }
+
   nav .links {
     display: flex;
     flex-direction: row;
@@ -42,6 +61,8 @@ nav {
   nav .links .link a {
     text-decoration: none;
     color: inherit;
+    width: max-content;
+    height: max-content;
     position: relative;
     margin: 1rem;
     /* font-size: 1.25rem; */
@@ -49,7 +70,7 @@ nav {
     padding: 0.5rem 0;
   }
 
-  a::after {
+  nav .links .link a::after , .name a:hover::after{
     content: "";
     position: absolute;
     top: 0;
@@ -57,15 +78,18 @@ nav {
     z-index: -1;
     width: 0px;
     height: 2pt;
-    transition: all 0.4s linear;
+    transition: all 0.18s linear;
   }
-  a:hover::after {
-    width: 100%;
-    border-radius: 1rem;
+  nav .links .link a:hover::after , .name a:hover::after{
+    width: 85%;
+    padding: 0 1rem;
+    height: 45%;
+    background-color: #de6ffa;
+    border-radius: 2rem;
     border-bottom: solid 2pt #de6ffa;
   }
 
-  a::before {
+  nav .links .link a::before , .name a::before{
     content: "";
     position: absolute;
     bottom: 0;
@@ -73,16 +97,24 @@ nav {
     z-index: -1;
     width: 0px;
     height: 2pt;
-    transition: all 0.4s linear;
+    transition: all 0.1s linear;
   }
-  a:hover::before {
+  nav .links .link a::first-letter {
+    color: #de6ffa;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  nav .links .link a:hover::before , .name a:hover::before{
     /* padding: 0 1rem; */
-    width: 100%;
-    border-radius: 1rem;
+    width: 85%;
+    height: 45%;
+    padding: 0 1rem;
+    background-color: #de6ffa;
+    border-radius: 2rem;
     border-top: solid 2pt #de6ffa;
   }
-  a:hover::first-letter {
-    color: #de6ffa;
+  nav .links .link a:hover::first-letter {
+    color: black;
     font-weight: bold;
     font-size: 1.25rem;
   }
