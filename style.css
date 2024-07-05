@@ -1,0 +1,168 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  user-select: none;
+  -webkit-user-drag: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  /* background: repeating-conic-gradient(cornflowerblue 10%, #e7f2fd 20%, #4070f4 30%); */
+  /* background: #e7f2fd; */
+}
+.con {
+    display: grid;
+  position: relative;
+  max-width: 1350px;
+  width: 100%;
+  padding: 1rem 2rem;
+  /* border: solid 2px rebeccapurple; */
+}
+.con .bg{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    position: absolute;
+    top: 0%;
+    gap: 2rem;
+    z-index: -1;
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    background-image: repeating-linear-gradient(135deg, hsla(307,70%,63%,0.05) 0px, hsla(307,70%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(307,70%,63%,0.05) 11px, hsla(307,70%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(307,70%,63%,0.05) 0px, hsla(307,70%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(307,70%,63%,0.05) 11px, hsla(307,70%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, hsla(307,70%,63%,0.05) 0px, hsla(307,70%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(307,70%,63%,0.05) 11px, hsla(307,70%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(307,70%,63%,0.05) 0px, hsla(307,70%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(307,70%,63%,0.05) 11px, hsla(307,70%,63%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(197, 1, 191),rgb(96, 73, 231));
+    width: 100%;
+ 
+}
+@keyframes change {
+    0%{
+        transform: scale(0.1) ;
+        box-shadow: 2px 2px 4px black;
+        border-radius: 0%;
+    }
+    50%{
+        transform: scale(1);
+        transform: scale(3) rotate(360deg);
+        border-radius: 100%;
+        box-shadow:inset -2px -2px 4px white, inset 2px 2px 4px black;
+    }
+    100%{
+        transform: scale(0.1) ;
+        border-radius: 0%;
+        box-shadow: 2px 2px 4px black;
+    }
+}
+.con .bg .sq{
+    padding: 2rem;
+    box-shadow: 2px 2px 4px black;
+    background: transparent;
+    transition: all .2s linear;
+    animation: change 5s linear infinite;
+}
+
+.filter_buttons {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  /* max-height: 3.75rem; */
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+  /* border: solid 2px rebeccapurple; */
+}
+.filter_buttons  button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  background-color: #ffffff;
+  padding: 1rem 1.2rem;
+  max-height: fit-content;
+  border: none;
+  border-radius: 6pt;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.1s linear;
+
+}
+
+.filter_buttons  button:hover,
+button.active {
+  color: white;
+  background-color: #4070f4;
+}
+
+.filterable_cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 2rem 1rem ;
+  /* padding: 1rem 2rem; */
+  /* border: solid 2px red; */
+}
+.card {
+    flex-grow: 1;
+  flex-basis: 250px;
+  backdrop-filter: blur(5px);
+  background-color: hsla(0,100%,100%,0.45);
+  padding: 3px;
+  margin: auto;
+  border-radius: 8pt;
+  transition: all .2s linear;
+  border: solid 1px white;
+}
+.card:hover{
+    padding: 0;
+    /* border-radius:8pt; */
+    border-radius:8pt ;
+    border: solid 2px #4070f4;
+}
+.card.hide{
+    display: none;
+}
+.card .img {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 7pt 7pt 0 0;
+  /* border: solid 2px forestgreen; */
+}
+.card .img img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s linear;
+  /* border: solid 2px black; */
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem;
+  color: white;
+  border-radius: 0 0 8pt 8pt;
+  background-color: #4070f4;
+  text-align: center;
+  /* border: solid 2px forestgreen; */
+}
+.card-body:hover .card-title {
+  cursor: pointer;
+  color: white;
+  text-decoration: underline;
+}
+.card-body .card-title {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  /* color: #333; */
+}
+.card-body .card-text {
+  font-size: 14px;
+  /* color: #333; */
+}
+
+img:hover {
+  transform: scale(1.15);
+}
