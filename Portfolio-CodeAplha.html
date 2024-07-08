@@ -3,256 +3,185 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Navbar Example</title>
-    <style>
-      /* Reset some default styles */
-      body,
-      html {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      /* Styles for the fixed navbar */
-      #navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        width: 100%;
-        background-color: #333;
-        background-color: white;
-        padding: 1rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-      }
-
-      .logo {
-        color: #2f55e4;
-        font-weight: bold;
-        font-size: 2rem;
-        transition: all .1s linear;
-      }
-      .logo:hover{
-        color: black;
-      }
-      .links {
-        display: flex;
-        gap: 1rem;
-        margin: 0;
-        padding: 0;
-      }
-
-      .links a {
-        color: black;
-        width: max-content;
-        margin: auto;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        /* margin: 0.25rem``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````` 0; */
-        border-radius: 4px;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        position: relative;
-        display: inline-block;
-        transform: skew(-20deg);
-        /* background-color: white; */
-        text-align: center;
-      }
-
-      .links a:hover {
-        color: white;
-        background-color: #2f55e4;
-        border: solid 2px #2f55e4;
-      }
-
-      .links a span {
-        display: inline-block;
-        transform: skew(20deg);
-      }
-
-      .hamburger {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-      }
-
-      .hamburger div {
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        margin: 3px 0;
-      }
-
-      /* Media query for responsive navbar */
-      @media (max-width: 768px) {
-        .links {
-          display: none;
-          flex-direction: column;
-          width: 100%;
-          text-align: center;
-        }
-
-        .links.open {
-          display: flex;
-          position: absolute;
-          top: 60px;
-          left: 0;
-          background-color: white;
-          width: 100%;
-        }
-
-        .links a {
-          padding: 1rem;
-          margin: 0.5rem 0;
-        }
-
-        .hamburger {
-          display: flex;
-        }
-      }
-
-      /* Styles for the main content */
-      main {
-        padding-top: 4rem; /* Default fallback value */
-      }
-
-      section {
-        display: flex;
-        gap: 0;
-        flex-direction: column;
-        justify-content:space-around;
-        align-items: center;
-        min-height: 100vh;
-        padding-top: 4rem; /* Adjust as necessary */
-        margin-top: -4rem;
-        /* Counteract the padding-top for proper section positioning */
-        padding: 1rem;
-      }
-      section .bio {
-        width: 100%;
-        padding: 1rem;
-        height: max-content;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
-        /* margin: auto; */
-        border: solid 2px salmon;
-      }
-      section#home
-      .bio .right {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 0;
-        font-size: 1.5rem;
-        border: solid 2px red;
-      }
-      .bio .right p{
-        border: solid 2px aqua;
-      }
-      .bio .right p span{
-        color: cornflowerblue;
-      }
-      section:nth-child(1) {
-        border: solid 2px greenyellow;
-      }
-      section:nth-child(2) {
-        border: solid 2px palevioletred;
-      }
-    </style>
+    <title>Styled Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header id="navbar">
-      <div class="logo">Portfolio .</div>
-      <div class="links">
-        <a href="#home"><span>Home</span></a>
-        <a href="#about"><span>About</span></a>
-        <a href="#contact"><span>Contact Me</span></a>
-        <a href="#projects"><span>Projects</span></a>
+    <nav class="navbar">
+      <div class="logo">Portfolio</div>
+      <ul class="nav-menu links">
+        <li class="nav-item">
+          <a href="#Home" class="nav-link h"><span>Home</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#About" class="nav-link A"><span>About</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#Work" class="nav-link M"><span>My Work</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#Contact" class="nav-link C"><span>Contact</span></a>
+        </li>
+      </ul>
+      <div class="hamburger" onclick="dis()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
-      <div class="hamburger" id="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
+    </nav>
+
+    <section class="home" id="Home">
+      <div class="sec1">
+        <p>H<span class="word">i,</span></p>
+        <p>I'm <span class="word">Tushar</span></p>
+        <p>Frontend <span class="word">Developer</span></p>
+        <a
+          class="sec1-con"
+          href="mailto:gramnitushar2002@gmail.com"
+          target="_parent"
+          >Contact</a
+        >
+        <div class="icon">
+          <a
+            href="https://www.linkedin.com/in/tushar-gramni-2304b3222/"
+            target="_parent"
+            ><img src="./icons/icons8-linkedin.svg" alt=""
+          /></a>
+          <a href="https://github.com/tushargramni" target="_parent"
+            ><img src="./icons/icons8-github.svg" alt=""
+          /></a>
+          <a href="mailto:gramnitushar2002@gmail.com" target="_parent"
+            ><img src="./icons/icons8-gmail.svg" alt=""
+          /></a>
+        </div>
       </div>
-    </header>
-    <main id="main-content">
-      <section id="home">
-        <p class="heading">Welcome to the Portfolio</p>
-        <div class="bio">
-          <div class="right">
-            <p>H<span>i,</span></p>
-            <p>I'm <span>Tushar</span></p>
-            <p>Frontend <span>Developer</span></p>
-          </div>
-          <div
-            class="left"
-            style="
-              background-color: cornflowerblue;
-              height: 300px;
-              width: 280px;
-              overflow: hidden;
-              object-fit: cover;
-              display: flex;
-              flex-direction: column;
-              border-radius: 67% 33% 52% 48% / 40% 50% 50% 60%;
-            "
-          >
-            <img
-              src="./images/tushar-bg-removed.png"
-              alt=""
-              width="100%"
-              height="180%"
-              style="filter: drop-shadow(2px 2px 2px cornflowerblue)"
-            />
+      <div class="sec2">
+        <div class="img">
+          <img src="./images/tushar-bg-rm.png" alt="Tushar" />
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="About">
+      <div class="sec1">
+        <div class="img">
+          <img src="./images/tushar-bg-rm.png " alt="" />
+        </div>
+      </div>
+      <div class="sec2">
+        <p class="heading">About Section</p>
+        <ul>
+          <li><span>Name</span>:&nbsp;Tushar Gramni</li>
+          <li><span>Current-Location</span>:&nbsp;Ambala Cantt</li>
+          <li>
+            <span>Graduation in BCA</span>:&nbsp;Lovely Professional University
+          </li>
+          <li>
+            <span>Diploma in Computer Engg.</span>:&nbsp;Government Polytechnic
+            Ambala City
+          </li>
+        </ul>
+        <div class="skl">
+          <p>Skills :</p>
+          <div class="sk">
+            <ruby
+              >HTML5<rt><img src="./icons/icons8-html.svg" alt="" /></rt
+            ></ruby>
+            <ruby
+              >CSS3<rt><img src="./icons/icons8-css.svg" alt="" /></rt
+            ></ruby>
+            <ruby
+              >JavaScript<rt
+                ><img src="./icons/icons8-javascript.svg" alt="" /></rt
+            ></ruby>
+            <ruby
+              >Github<rt><img src="./icons/icons8-github.svg" alt="" /></rt
+            ></ruby>
+            <ruby
+              >vsCode<rt
+                ><img src="./icons/icons8-visual-studio-code.svg" alt="" /></rt
+            ></ruby>
           </div>
         </div>
-      </section>
-      <section id="about">
-        <p>This is about section...</p>
-      </section>
-      <section id="contact">
-        <p>This is contact section...</p>
-      </section>
-      <section id="projects">
-        <p>This is project section...</p>
-      </section>
-    </main>
-    <script>
-      // JavaScript to dynamically set the padding-top for main-content
-      document.addEventListener("DOMContentLoaded", function () {
-        const navbar = document.getElementById("navbar");
-        const mainContent = document.getElementById("main-content");
-        const hamburger = document.getElementById("hamburger");
-        const links = document.querySelector(".links");
+      </div>
+    </section>
 
-        function updateNavbarHeight() {
-          const navbarHeight = navbar.offsetHeight;
-          mainContent.style.paddingTop = `${navbarHeight}px`;
+    <section class="work" id="Work">
+      <h1>My Work</h1>
+      <div class="work-box">
+        <a
+          href="https://github.com/tushargramni/Tic-Tac-Toe"
+          target="_parent"
+          class="card"
+        >
+          <figure>
+            <img src="./images/Tic-Tac-Toe.png" alt="" />
+          </figure>
+          <p class="pName">TIC-TAC-TOE</p>
+        </a>
+        <a
+          href="https://github.com/tushargramni/Login-Form"
+          target="_parent"
+          class="card"
+        >
+          <figure>
+            <img src="./images/Login-form.png" alt="" />
+          </figure>
+          <p class="pName">LOGIN-FORM</p>
+        </a>
+        <a
+          href="https://github.com/tushargramni/Social-Profile-Card-Frontend-Mentor"
+          target="_parent"
+          class="card"
+        >
+          <figure>
+            <img src="./images/image.png" alt="" />
+          </figure>
+          <p class="pName">Social-Profile-Card</p>
+        </a>
+        <a
+          href="https://github.com/tushargramni/Blog-Review-Card"
+          target="_parent"
+          class="card"
+        >
+          <figure>
+            <img src="./images/blog-preview.png" alt="" />
+          </figure>
+          <p class="pName">Blog Preview Card</p>
+        </a>
+        <a
+          href="https://github.com/tushargramni/Qr-Code-Component"
+          target="_parent"
+          class="card"
+        >
+          <figure>
+            <img src="./images/card.png" alt="" />
+          </figure>
+          <p class="pName">Qr-Code-Component</p>
+        </a>
+        <a
+          href="https://github.com/tushargramni/3-Column-Preview-Card"
+          target="_parent"
+          class="card"
+        >
+          <figure>
+            <img src="./images/3-col-card.png" alt="" />
+          </figure>
+          <p class="pName">3-Column-Preview-Card</p>
+        </a>
+      </div>
+    </section>
 
-          // Adjust padding-top for sections when navigating to anchors
-          const sections = document.querySelectorAll("section");
-          sections.forEach((section) => {
-            section.style.paddingTop = `${navbarHeight}px`;
-          });
-        }
+    <section class="contact" id="Contact">
+      <p>Contact Me</p>
+      <form action="get">
+        <input type="text" name="" id="" placeholder="Name" />
+        <input type="email" name="" id="" placeholder="Email-Address" />
+        <textarea name="" id="" cols="15" rows="8"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
 
-        // Set the initial value
-        updateNavbarHeight();
-
-        // Update the value on window resize
-        window.addEventListener("resize", updateNavbarHeight);
-
-        // Toggle navbar menu on hamburger click
-        hamburger.addEventListener("click", () => {
-          links.classList.toggle("open");
-        });
-      });
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
