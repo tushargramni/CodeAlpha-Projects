@@ -19,6 +19,16 @@ a {
   text-decoration: none;
   color: inherit;
 }
+a.nav-link span::before{
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  transition: all .16s linear;
+  background: #007bff;
+}
 
 /* Fixed Navbar */
 .navbar {
@@ -52,14 +62,23 @@ a {
 .nav-link {
   color: black;
   padding: 0rem 1rem;
+  background-color: none;
   transition: all 0.3s;
 }
 .nav-link span {
+  position: relative;
   padding: 0.5rem 0;
 }
-.nav-link:hover span {
-  border-radius: 2pt;
-  border-bottom: solid 2pt #007bff;
+.nav-link span:hover::before {
+  width: 100%;
+  height: 2px;
+  z-index: 2;
+  position: absolute;
+  content:"";
+  bottom: 0;
+  background: #007bff;
+  /* border-radius: 2pt; */
+  /* border-bottom: solid 2pt #007bff; */
 }
 
 .hamburger {
@@ -134,7 +153,7 @@ a {
 }
 
 .home .icon a img:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 .home .sec2 {
   margin: 2rem auto;
