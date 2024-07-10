@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+
+    <title>Neumorphism Effect Music App</title>
+  </head>
+  <body>
+    <section class="wrapper">
+      <header>
+        <button class="hdbtn">
+          <i class="fi fi-sr-arrow-small-left"></i>
+        </button>
+        <h3>Playing now</h3>
+        <button class="hdbtn">
+          <i class="fi fi-sr-list"></i>
+        </button>
+      </header>
+      <section class="player">
+        <div class="img-area">
+          <img src="#" alt="music name" />
+        </div>
+
+        <div class="song-details">
+          <h1 class="name">Animation</h1>
+          <h3 class="artist">Coding</h3>
+        </div>
+
+        <div class="audioC">
+          <div class="song-timer">
+            <span class="current-time">0:00</span>
+            <span class="max-duration">0:00</span>
+          </div>
+          <div class="progress-area">
+            <div class="progress-bar">
+              <audio
+                id="main-audio"
+                src="https://www.youtube.com/watch?v=dhYOPzcsbGM"
+              ></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="btnC" id="prev">
+            <i class="fi fi-sr-rewind"></i>
+          </button>
+          <button class="play-pause btnC" id="prev">
+            <i class="fi fi-sr-play play"></i>
+          </button>
+          <button class="btnC" id="next">
+            <i class="fi fi-sr-forward"></i>
+          </button>
+        </div>
+      </section>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

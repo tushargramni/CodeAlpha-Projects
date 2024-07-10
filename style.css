@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --bg01: linear-gradient(180deg, #22262a 0%, #181a1d 100%);
+  --bg02: linear-gradient(135deg, #2f3439, #1d1f23);
+  --bg03: linear-gradient(135deg, #2c2136, #1d2023);
+  --bg04: #040404;
+
+  --border01: #22262a;
+  --border02: #1a1d21;
+
+  --box-shadow01: 6px 6px 10px #151618, -6px -6px 10px #2c3136,
+    inset 2px 2px 6px #33353b, inset -3px -3px 6px #151618;
+
+  --box-shadow02: 6px 6px 10px #151618, -6px -6px 10px #2c3136,
+    inset 2px 2px 6px #33353b, inset -3px -3px 6px #151618;
+
+  --box-shadow03: 6px 6px 12px #151618, -6px -6px 12px #2c3136;
+
+  --box-shadow04: inset 2px 2px 3px -2px rgba(167, 169, 171, 0.322),
+    inset 0px -1px 1px 0px #4a4c4e;
+
+    --box-shadow05: 8px 8px 12px #151618, -2px -2px 10px #2c3136,
+    inset 2px 2px 3px #33353b, inset -2px -2px 3px #151618;
+
+    --box-shadow06:10px 10px 12px #151618, -10px -10px 12px #222529,
+    inset 4px 4px 8px #33353b, inset -4px -4px 8px #151618;
+
+    --box-shadow07:10px 10px 12px #151618, -10px -10px 12px #222529,
+    inset 4px 4px 8px #33353b, inset -4px -4px 8px #151618;
+    
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif ;
+}
+body{
+    font-family: 'Lato',sans-serif;
+    background: var(--bg01);
+}
+.wrapper{
+    max-width: 900px;
+    height: 100vh;
+    text-align: center;
+    padding: 2rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
