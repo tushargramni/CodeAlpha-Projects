@@ -3,33 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
-    />
+    <link rel="stylesheet" href="./style.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
     <title>Neumorphism Effect Music App</title>
   </head>
   <body>
-    <section class="wrapper">
+    <div class="wrapper">
       <header>
         <button class="hdbtn">
-          <i class="fi fi-sr-arrow-small-left"></i>
+          <i class="fas fa-arrow-left"></i>
         </button>
         <h3>Playing now</h3>
         <button class="hdbtn">
-          <i class="fi fi-sr-list"></i>
+          <i class="fas fa-list"></i>
         </button>
       </header>
-      <section class="player">
+      <div class="player">
         <div class="img-area">
-          <img src="#" alt="music name" />
+          <img src="./image/image.png" alt="music name" style="border-radius: 50%;"/>
         </div>
 
         <div class="song-details">
-          <h1 class="name">Animation</h1>
-          <h3 class="artist">Coding</h3>
+          <h1 class="name">On My Way</h1>
+          <h3 class="artist">Alan Walker</h3>
         </div>
 
         <div class="audioC">
@@ -38,10 +37,10 @@
             <span class="max-duration">0:00</span>
           </div>
           <div class="progress-area">
-            <div class="progress-bar">
+            <div class="progress-bar" >
               <audio
                 id="main-audio"
-                src="https://www.youtube.com/watch?v=dhYOPzcsbGM"
+                src="/song_links/on_my-way.mp3"
               ></audio>
             </div>
           </div>
@@ -49,17 +48,17 @@
 
         <div class="controls">
           <button class="btnC" id="prev">
-            <i class="fi fi-sr-rewind"></i>
+            <i class="fas fa-backward"></i>
           </button>
           <button class="play-pause btnC" id="prev">
-            <i class="fi fi-sr-play play"></i>
+            <i class="fas fa-play"></i>
           </button>
           <button class="btnC" id="next">
-            <i class="fi fi-sr-forward"></i>
+            <i class="fas fa-forward"></i>
           </button>
         </div>
-      </section>
-    </section>
+      </div>
+    </div>
 
     <script src="./script.js"></script>
   </body>

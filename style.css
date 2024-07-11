@@ -20,32 +20,188 @@
   --box-shadow04: inset 2px 2px 3px -2px rgba(167, 169, 171, 0.322),
     inset 0px -1px 1px 0px #4a4c4e;
 
-    --box-shadow05: 8px 8px 12px #151618, -2px -2px 10px #2c3136,
+  --box-shadow05: 8px 8px 12px #151618, -2px -2px 10px #2c3136,
     inset 2px 2px 3px #33353b, inset -2px -2px 3px #151618;
 
-    --box-shadow06:10px 10px 12px #151618, -10px -10px 12px #222529,
+  --box-shadow06: 10px 10px 12px #151618, -10px -10px 12px #222529,
     inset 4px 4px 8px #33353b, inset -4px -4px 8px #151618;
 
-    --box-shadow07:10px 10px 12px #151618, -10px -10px 12px #222529,
+  --box-shadow07: 10px 10px 12px #151618, -10px -10px 12px #222529,
     inset 4px 4px 8px #33353b, inset -4px -4px 8px #151618;
-    
 }
 
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif ;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-drag: none;
+  font-family: "Lato", sans-serif;
 }
-body{
-    font-family: 'Lato',sans-serif;
-    background: var(--bg01);
+body {
+  font-family: "Lato", sans-serif;
+  background: var(--bg01);
+  min-height: 100vh;
 }
-.wrapper{
-    max-width: 900px;
-    height: 100vh;
-    text-align: center;
-    padding: 2rem;
-    margin: 0 auto;
-    overflow: hidden;
+.wrapper {
+  max-width: 900px;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem;
+  margin: 0 auto;
+  overflow: hidden;
 }
+audio {
+  border: solid 2px darkcyan;
+}
+header,
+.song-timer,
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+header .hdbtn {
+  background-color: var(--bg02);
+  border: solid 2px var(--border01);
+  box-shadow: var(--box-shadow01);
+  width: 52px;
+  height: 52px;
+  line-height: 52px;
+  color: #86898c;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.hdbtn:active {
+  box-shadow: var(--box-shadow02);
+}
+header h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #86898c;
+}
+.player {
+  margin-top: 2rem;
+}
+img {
+  width: 18rem;
+  height: 18rem;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+.name {
+  color: #a7a9ab;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.artist {
+  color: #7c7d80;
+  font-size: 14px;
+  text-transform: capitalize;
+  padding: 10px 0 20px 0;
+}
+.audioC {
+  margin: 30px 0 30px 0;
+}
+.song-timer {
+  margin-bottom: 20px;
+}
+.song-timer span {
+  font-size: 10px;
+  color: #7c7d80;
+  font-weight: 800;
+}
+.progress-area {
+  width: 100%;
+  height: 7px;
+  margin-top: 15px;
+  border-radius: 50px;
+  background: var(--bg04);
+  box-shadow: var(--box-shadow04);
+  cursor: pointer;
+}
+.progress-area,
+.progress-bar {
+  width: 100%;
+  border: 1px solid #eee;
+  height: inherit;
+  position: relative;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #bf2311 0%, #e1530a 80%);
+  box-shadow: var(--box-shadow04);
+}
+.progress-bar::before {
+  position: absolute;
+  content: "";
+  background: var(--bg02);
+  box-shadow: var(--box-shadow05);
+  border-radius: 50%;
+  top: 50%;
+  right: -14px;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  outline: none;
+  border: none;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+}
+.controls {
+  margin: 55px 8px 5px 8px;
+}
+.btnC {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: solid 3px var(--border02);
+  transition: all 0.2s ease;
+  background: var(--bg03);
+  box-shadow: var(--box-shadow06);
+}
+.btnC:active {
+  box-shadow: var(--box-shadow07);
+}
+.controls i {
+  font-size: 20px;
+  user-select: none;
+  color: #7a7a79;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.controls .play-pause {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.play-pause i {
+  text-align: center;
+  color: #fff;
+}
+.play-pause {
+  border: solid 3px #ce4b0e;
+  background: linear-gradient(135deg, #bd2210, #e5550b);
+  box-shadow: -10px -10px 12px #151618, -10px -10px 12px #222529,
+    inset -4px -4px 8px #e5550b, inset -4px -4px 8px #bd2210;
+}
+
+.pause:active {
+  border: solid 3px #ce4b0e;
+  background: linear-gradient(135deg, #bd2210, #e5550b);
+  box-shadow: -10px -10px 12px #151618, -10px -10px 12px #222529,
+    inset -10px -10px 8px #e5550b, inset -10px -10px 8px #bd2210;
+}
+.rotate{
+  animation:  roatation 8s infinite linear;
+  transform-origin: center;
+}
+
