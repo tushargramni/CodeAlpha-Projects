@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css"/>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./image/da-da-da-song.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <title>Neumorphism Effect Music App</title>
   </head>
   <body>
@@ -23,7 +21,7 @@
       </header>
       <div class="player">
         <div class="img-area">
-          <img src="./image/image.png" alt="music name" style="border-radius: 50%;"/>
+          <img src="/image/da-da-da-song.jpeg" alt="music name" style="border-radius: 50%" />
         </div>
 
         <div class="song-details">
@@ -37,12 +35,8 @@
             <span class="max-duration">0:00</span>
           </div>
           <div class="progress-area">
-            <div class="progress-bar" >
-              <audio
-                id="main-audio"
-                src="./audio/da da da.mp3"
-              ></audio>
-            </div>
+            <div class="progress-bar"></div>
+            <audio id="main-audio" src="./audio/da da da.mp3"></audio>
           </div>
         </div>
 
@@ -50,7 +44,7 @@
           <button class="btnC" id="prev">
             <i class="fas fa-backward"></i>
           </button>
-          <button class="play-pause btnC" id="prev">
+          <button class="play-pause btnC" id="play-pause">
             <i class="fas fa-play"></i>
           </button>
           <button class="btnC" id="next">
