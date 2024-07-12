@@ -1,59 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
+<head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="shortcut icon" href="./image/da-da-da-song.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <title>Neumorphism Effect Music App</title>
-  </head>
-  <body>
+</head>
+<body>
     <div class="wrapper">
-      <header>
-        <button class="hdbtn">
-          <i class="fas fa-arrow-left"></i>
-        </button>
-        <h3>Playing now</h3>
-        <button class="hdbtn">
-          <i class="fas fa-list"></i>
-        </button>
-      </header>
-      <div class="player">
-        <div class="img-area">
-          <img src="/image/da-da-da-song.jpeg" alt="music name" style="border-radius: 50%" />
-        </div>
+        <header>
+            <button class="hdbtn">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h3>Playing now</h3>
+            <button class="hdbtn" id="menu-btn">
+                <i class="fas fa-list"></i>
+            </button>
+        </header>
+        <div class="player">
+            <div class="img-area">
+                <img src="./image/da-da-da-song.jpeg" alt="music name" style="border-radius: 50%" />
+            </div>
 
-        <div class="song-details">
-          <h1 class="name">On My Way</h1>
-          <h3 class="artist">Alan Walker</h3>
-        </div>
+            <div class="song-details">
+                <h1 class="name">On My Way</h1>
+                <h3 class="artist">Alan Walker</h3>
+            </div>
 
-        <div class="audioC">
-          <div class="song-timer">
-            <span class="current-time">0:00</span>
-            <span class="max-duration">0:00</span>
-          </div>
-          <div class="progress-area">
-            <div class="progress-bar"></div>
-            <audio id="main-audio" src="./audio/da da da.mp3"></audio>
-          </div>
-        </div>
+            <div class="audioC">
+                <div class="song-timer">
+                    <span class="current-time">0:00</span>
+                    <span class="max-duration">0:00</span>
+                </div>
+                <div class="progress-area">
+                    <div class="progress-bar"></div>
+                    <audio id="main-audio" src="./audio/da da da.mp3"></audio>
+                </div>
+            </div>
 
-        <div class="controls">
-          <button class="btnC" id="prev">
-            <i class="fas fa-backward"></i>
-          </button>
-          <button class="play-pause btnC" id="play-pause">
-            <i class="fas fa-play"></i>
-          </button>
-          <button class="btnC" id="next">
-            <i class="fas fa-forward"></i>
-          </button>
+            <div class="controls">
+                <button class="btnC" id="prev">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button class="play-pause btnC" id="play-pause">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="btnC" id="next">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
         </div>
-      </div>
+        <div class="menu" id="menu">
+            <h3>Other Songs</h3>
+            <ul>
+                <li data-audio="./audio/da da da.mp3song1.mp3" data-title="Song 1" data-artist="Artist 1">Song 1 - Artist 1</li>
+                <li data-audio="./audio/gangsta-paradise.mp3" data-title="Song 2" data-artist="Artist 2">Song 2 - Artist 2</li>
+                <li data-audio="./audio/kosandra.mp3" data-title="Song 3" data-artist="Artist 3">Song 3 - Artist 3</li>
+            </ul>
+        </div>
     </div>
 
     <script src="./script.js"></script>
-  </body>
+</body>
 </html>

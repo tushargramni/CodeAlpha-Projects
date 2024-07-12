@@ -16,10 +16,12 @@ body {
 
 .wrapper {
   background: #e0e5ec;
-  width: 350px;
+  width: 100%;
+  max-width: 800px;
   padding: 20px;
   border-radius: 30px;
   box-shadow: 7px 7px 15px #a3b1c6, -7px -7px 15px #ffffff;
+  position: relative;
 }
 
 header {
@@ -41,6 +43,11 @@ h3 {
   border-radius: 50%;
   box-shadow: 7px 7px 15px #a3b1c6, -7px -7px 15px #ffffff;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hdbtn:hover {
+  box-shadow: inset 7px 7px 15px #a3b1c6, inset -7px -7px 15px #ffffff;
 }
 
 .hdbtn i {
@@ -52,12 +59,18 @@ h3 {
 }
 
 .img-area {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
   margin: 0 auto 20px;
   border-radius: 50%;
   background: #e0e5ec;
   box-shadow: inset 7px 7px 15px #a3b1c6, inset -7px -7px 15px #ffffff;
+  transition: all 0.3s ease;
+}
+
+.img-area:hover {
+  box-shadow: 7px 7px 15px #a3b1c6, -7px -7px 15px #ffffff;
 }
 
 .img-area img {
@@ -110,6 +123,8 @@ h3 {
 .controls {
   display: flex;
   justify-content: space-between;
+  max-width: 200px;
+  margin: 0 auto;
 }
 
 .btnC {
@@ -119,6 +134,11 @@ h3 {
   border-radius: 50%;
   box-shadow: 7px 7px 15px #a3b1c6, -7px -7px 15px #ffffff;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnC:hover {
+  box-shadow: inset 7px 7px 15px #a3b1c6, inset -7px -7px 15px #ffffff;
 }
 
 .btnC i {
@@ -128,4 +148,43 @@ h3 {
 .play-pause {
   width: 70px;
   height: 70px;
+}
+
+/* Menu styles */
+.menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(224, 229, 236, 0.95);
+  padding: 20px;
+  box-shadow: 7px 7px 15px #a3b1c6, -7px -7px 15px #ffffff;
+  border-radius: 30px;
+  overflow-y: auto;
+}
+
+.menu h3 {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #e0e5ec;
+  margin-bottom: 10px;
+  box-shadow: 7px 7px 15px #a3b1c6, -7px -7px 15px #ffffff;
+  transition: all 0.3s ease;
+}
+
+.menu ul li:hover {
+  background: #d1d9e6;
 }

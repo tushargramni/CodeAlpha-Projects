@@ -6,7 +6,9 @@ const wrapper = document.querySelector(".wrapper"),
   progressBar = wrapper.querySelector(".progress-bar"),
   progressArea = wrapper.querySelector(".progress-area"),
   currentTimeEl = wrapper.querySelector(".current-time"),
-  maxDurationEl = wrapper.querySelector(".max-duration");
+  maxDurationEl = wrapper.querySelector(".max-duration"),
+  menuBtn = wrapper.querySelector("#menu-btn"),
+  menu = wrapper.querySelector("#menu");
 
 // Play/Pause button event
 playPauseBtn.addEventListener("click", () => {
@@ -74,4 +76,36 @@ mainAudio.addEventListener("ended", () => {
   progressBar.style.width = `0%`;
   currentTimeEl.innerText = `0:00`;
   maxDurationEl.innerText = `0:00`;
+});
+
+// Seek forward and backward by a few seconds
+prevBtn.addEventListener("click", () => {
+  mainAudio.currentTime -= 10; // Go back by 10 seconds
+});
+
+nextBtn.addEventListener("click", () => {
+  mainAudio.currentTime += 10; // Go forward by 10 seconds
+});
+
+// Toggle menu visibility
+menuBtn.addEventListener("click", () => {
+  menu.style.display =
+    menu.style.display === "none" || menu.style.display === ""
+      ? "block"
+      : "none";
+});
+
+// Change song when clicking on a menu item
+menu.addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
+    const audioSrc = e.target.getAttribute("data-audio");
+    const songTitle = e.target.getAttribute("data-title");
+    const songArtist = e.target.getAttribute("data-artist");
+
+    mainAudio.src = audioSrc;
+    wrapper.querySelector(".name").innerText = songTitle;
+    wrapper.querySelector(".artist").innerText = songArtist;
+    playMusic();
+    menu.style.display = "none";
+  }
 });
