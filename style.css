@@ -12,8 +12,6 @@ body {
   display: grid;
   width: 100%;
   min-height: 100vh;
-  /* background: repeating-conic-gradient(cornflowerblue 10%, #e7f2fd 20%, #4070f4 30%); */
-  /* background: #e7f2fd; */
 }
 .con {
     display: grid;
@@ -41,23 +39,23 @@ body {
 }
 @keyframes change {
     0%{
-        transform: scale(0.1) ;
         box-shadow: 2px 2px 4px black;
         border-radius: 0%;
     }
     50%{
-        transform: scale(1);
-        transform: scale(3) rotate(360deg);
+        transform: scale(1) rotate(360deg) translateY(0);
         border-radius: 100%;
         box-shadow:inset -2px -2px 4px white, inset 2px 2px 4px black;
     }
     100%{
-        transform: scale(0.1) ;
+        transform: scale(0.1)  translateY(-1000%);
         border-radius: 0%;
         box-shadow: 2px 2px 4px black;
     }
 }
 .con .bg .sq{
+  margin: 1rem;
+  /* display: none; */
     padding: 2rem;
     box-shadow: 2px 2px 4px black;
     background: transparent;
